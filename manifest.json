@@ -1,0 +1,18 @@
+{
+  "manifest_version": 2,
+  "name": "THM room rateo",
+  "version": "1.0",
+
+  "description": "THM: Adds a \"% of ppl in room\" to the \"Reccomend\" button",
+
+  "icons": {
+    "48": "icons/r_icon.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["https://tryhackme.com/room/*"],
+      "js": ["thmRoom.js"]
+    }
+  ]
+}
