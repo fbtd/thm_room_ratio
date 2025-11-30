@@ -11,7 +11,7 @@
 
   "content_scripts": [
     {
-      "matches": ["https://tryhackme.com/room/*"],
+      "matches": ["https://tryhackme.com/*"],
       "js": ["thmRoom.js"]
     }
   ]
