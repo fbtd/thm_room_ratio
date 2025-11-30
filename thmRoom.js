@@ -1,8 +1,8 @@
-console.log("EXT LOADED");
-
-let done = false;
+let lastPage = "";
 setInterval(() => {
-    if (done) return;
+    const currentPage = window.location.href;
+
+    if (lastPage == currentPage) return;
     const faUserGroupElements = document.getElementsByClassName("svg-inline--fa fa-user-group");
     if (faUserGroupElements.length === 0) return;
     const nEnrolled = parseInt(
@@ -22,5 +22,5 @@ setInterval(() => {
     const percent = nRecomends * 100 / nEnrolled;
 
     faThumbsUp[0].parentNode.querySelector("span").innerHTML = `${nRecomends} (${percent.toFixed(2)}%)`;
-    done = true;
+    lastPage = currentPage;
 }, 1000);
